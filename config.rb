@@ -47,12 +47,27 @@ activate :contentful do |f|
   f.content_types = { product: 'product'}
 end
 
-# Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+data.contentful.product.each do |elem|
+  p = elem[1]
+  proxy "products/#{p.slug}.html", "product.html", :locals => { :product => p }, :ignore => true
+end
+
+helpers do
+  def snipcart_button (p, text)
+    args = {
+            :"class" => "snipcart-add-item",
+            :"data-item-id" => p.id,
+            :"data-item-price" => p.price,
+            :"data-item-name" => p.name,
+            :"data-item-url" => current_page.url,
+            :"data-item-max-quantity" => p.max_quantity
+    }
+
+    content_tag :button, args do
+      text
+    end
+  end
+end
 
 set :css_dir, 'stylesheets'
 

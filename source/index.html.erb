@@ -14,7 +14,7 @@ title: My awesome store
     <% data.contentful.product.each do |elem| %>
       <% p = elem[1] %>
       <li>
-        <a href='<%= "product/#{p.slug}.html" %>'>
+        <a href='<%= "products/#{p.slug}.html" %>'>
           <%= image_tag p.image.url %>
         </a>
 
