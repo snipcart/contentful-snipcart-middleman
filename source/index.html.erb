@@ -11,18 +11,19 @@ title: My awesome store
 <div class="row">
   <ul class="small-block-grid-1 large-block-grid-3">
 
-    <% data.contenful.product.each do |b| %>
+    <% data.contentful.product.each do |elem| %>
+      <% p = elem[1] %>
       <li>
-        <a href='<%= "product/#{b.slug}.html" %>'>
-          <%= image_tag b.image %>
+        <a href='<%= "product/#{p.slug}.html" %>'>
+          <%= image_tag p.image.url %>
         </a>
 
         <div>
-          <strong><%= b.name %></strong>
+          <strong><%= p.name %></strong>
         </div>
 
         <div>
-          <%= number_to_currency(b.price, :unit => "$") %>
+          <%= number_to_currency(p.price, :unit => "$") %>
         </div>
 
       </li>
