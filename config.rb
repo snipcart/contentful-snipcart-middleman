@@ -40,6 +40,13 @@
 #   activate :livereload
 # end
 
+activate :contentful do |f|
+  f.space         = { contentful: 'di1jkctt8ejw' }
+  f.access_token  = ENV['CONTETNFUL_API_KEY']
+  f.cda_query     = { content_type: 'product', include: 1 }
+  f.content_types = { product: 'product'}
+end
+
 # Methods defined in the helpers block are available in templates
 # helpers do
 #   def some_helper

@@ -1,10 +1,32 @@
 ---
-title: Welcome to Middleman
+title: My awesome store
 ---
 
-<div class="welcome">
-  <h1>Middleman is Watching</h1>
-  <p class="doc">
-    <%= link_to "Read Online Documentation", "http://middlemanapp.com/" %>
-  </p><!-- .doc -->
-</div><!-- .welcome -->
+<div class="row">
+  <h1>
+    Products
+  </h1>
+</div>
+
+<div class="row">
+  <ul class="small-block-grid-1 large-block-grid-3">
+
+    <% data.contenful.product.each do |b| %>
+      <li>
+        <a href='<%= "product/#{b.slug}.html" %>'>
+          <%= image_tag b.image %>
+        </a>
+
+        <div>
+          <strong><%= b.name %></strong>
+        </div>
+
+        <div>
+          <%= number_to_currency(b.price, :unit => "$") %>
+        </div>
+
+      </li>
+    <% end %>
+
+  </ul>
+</div>
