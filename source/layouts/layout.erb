@@ -36,7 +36,7 @@
     <!-- Include Snipcart -->
     <%= javascript_include_tag  "https://app.snipcart.com/scripts/snipcart.js",
         :id => "snipcart",
-        :"data-api-key" => ENV["snipcart-api-key"] %>
+        :"data-api-key" => ENV["SNIPCART_API_KEY"] %>
     <%= stylesheet_link_tag "https://app.snipcart.com/themes/base/snipcart.css" %>
   </body>
 </html>
