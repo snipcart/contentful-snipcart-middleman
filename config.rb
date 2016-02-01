@@ -60,7 +60,9 @@ helpers do
             :"data-item-price" => p.price,
             :"data-item-name" => p.name,
             :"data-item-url" => current_page.url,
-            :"data-item-max-quantity" => p.max_quantity
+            :"data-item-max-quantity" => p.max_quantity,
+            :"data-item-description" => p.description,
+            :"data-item-image" => "http:#{p.image.url}"
     }
 
     content_tag :button, args do

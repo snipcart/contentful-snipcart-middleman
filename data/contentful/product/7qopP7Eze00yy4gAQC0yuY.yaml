@@ -1,10 +1,11 @@
 ---
 :id: 7qopP7Eze00yy4gAQC0yuY
-:name: Product 1
+:name: 'How to Become a Fierce T-Rex: Definitive VR Guide'
 :snipcartId: 1001
-:slug: product1
-:description: Lorem ipsum
-:price: 150
+:slug: trex-guide
+:description: The dinosaur kingdom is a ruthless place, even for a T-Rex. Learn how
+  to master and dominate it with this world-renowned, critically acclaimed VR guide.
+:price: 300
 :image:
-  :title: Image
-  :url: "//images.contentful.com/di1jkctt8ejw/6k50K3BmG4AS4I6yi844Wq/e1236d7468da3722c4092a0ad7ce3b9f/placeimg_250_250_tech.jpg"
+  :title: The T-Rex Guide
+  :url: "//images.contentful.com/di1jkctt8ejw/9OqK0i4hQ4Q4caMiGagWC/8eb7a9b11cb492fd84220b579fc1fb43/snipcart-middleman-contentful-trex-book.jpg"
