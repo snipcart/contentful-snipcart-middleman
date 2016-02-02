@@ -2,20 +2,25 @@
 title: product.name
 ---
 
-<div class="row">
-  <div class="large-6 small-12 columns text-center">
-    <%= image_tag product.image.url %>
-
-    <%= snipcart_button product, "Add to cart" %>
-  </div>
-
-  <div class="large-6 small-12 columns">
+<div class="row text-center column">
     <h1>
       <%= product.name %>
     </h1>
+</div>
 
+<div class="row">
+  <div class="large-6 small-12 columns text-center">
+    <%= image_tag product.image.url, class: "thumbnail" %>
+    <br />
+
+    <%= snipcart_button product, "Add to cart" %>
+  </div>
+  
+  <div class="large-6 small-12 columns">
     <p>
       <%= product.description %>
     </p>
   </div>
 </div>
+
+

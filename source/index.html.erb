@@ -2,20 +2,18 @@
 title: "The T-Rex VR Store: proudly powered by Contentful, Middleman & Snipcart"
 ---
 
-<div class="row">
+<div class="row column text-center">
   <h1>
     The T-Rex VR Store
   </h1>
 </div>
 
 <div class="row">
-  <ul class="small-block-grid-1 large-block-grid-3">
-
     <% data.contentful.product.each do |elem| %>
       <% p = elem[1] %>
-      <li>
+      <div class="small-6 columns">
         <a href='<%= "products/#{p.slug}.html" %>'>
-          <%= image_tag p.image.url %>
+          <%= image_tag p.image.url, class: "thumbnail" %>
         </a>
 
         <div>
@@ -26,8 +24,6 @@ title: "The T-Rex VR Store: proudly powered by Contentful, Middleman & Snipcart"
           <%= number_to_currency(p.price, :unit => "$") %>
         </div>
 
-      </li>
+      </div>
     <% end %>
-
-  </ul>
 </div>

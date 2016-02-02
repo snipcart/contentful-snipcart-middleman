@@ -55,7 +55,7 @@ end
 helpers do
   def snipcart_button (p, text)
     args = {
-            "class":"snipcart-add-item",
+            "class":"snipcart-add-item button",
             "data-item-id": p.id,
             "data-item-price": p.price,
             "data-item-name": p.name,
