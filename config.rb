@@ -55,14 +55,14 @@ end
 helpers do
   def snipcart_button (p, text)
     args = {
-            "class":"snipcart-add-item button",
-            "data-item-id": p.id,
-            "data-item-price": p.price,
-            "data-item-name": p.name,
-            "data-item-url": current_page.url,
-            "data-item-max-quantity": p.max_quantity,
-            "data-item-description": p.description,
-            "data-item-image": "http:#{p.image.url}"
+            "class" => "snipcart-add-item button",
+            "data-item-id" => p.id,
+            "data-item-price" => p.price,
+            "data-item-name" => p.name,
+            "data-item-url" => current_page.url,
+            "data-item-max-quantity" =>  p.max_quantity,
+            "data-item-description" => p.description,
+            "data-item-image" => "http:#{p.image.url}"
     }
 
     content_tag :button, args do
