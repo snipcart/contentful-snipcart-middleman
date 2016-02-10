@@ -1,3 +1,7 @@
 # Contentful / Snipcart / Middleman demo
 
-> Link to full how-to post and description incoming.
+See full post on the Contentful blog for detailed instructions & more: 
+
+> https://www.contentful.com/blog/2016/02/10/snipcart-middleman-contentful/
+
+
